@@ -1,8 +1,8 @@
 <?
-$title='Left Social Bar'; //'Super Search';
+$title='Left Social Bar'; //'Menu Title';
 $version='1.0'; //'v1.0';
-$launcher='hidden'; //'super_search.php';
-$description='Setup left vertical share bar'; //"Search various parts of our website";
+$launcher='hidden'; //'index.php or hidden';
+$description='Setup left vertical share bar'; //"long description of module";
 
 
 
@@ -14,12 +14,13 @@ if ($_GET['launch']) {
 	verify($title,$launcher);
 	
 } else {
-	$short_actual_link=short_actual_link;  // this must follow do_header
-	$ogtitle=ogtitleRRSSB;  // this must follow do_header
-	$ogdescription=ogdescriptionRRSSB;  // this must follow do_header
-	$ogurl=ogurlRRSSB;  // this must follow do_header
-	$ogkeywords=ogkeywordsRRSSB;  // this must follow do_header
-	$ogimage=ogimageRRSSB;  // this must follow do_header
+	// this must follow do_header
+	$short_actual_link=short_actual_link;
+	$ogtitle=ogtitleRRSSB;
+	$ogdescription=ogdescriptionRRSSB;
+	$ogurl=ogurlRRSSB;
+	$ogkeywords=ogkeywordsRRSSB;
+	$ogimage=ogimageRRSSB;
 
 	$test="
 	<div>$short_actual_link</div>
@@ -32,7 +33,6 @@ if ($_GET['launch']) {
 	";
 	
 	if ($short_actual_link and $ogtitle and $ogdescription) {
-		//https://github.com/AdamPS/rrssb-plus
 		include "rrssb.php"; // gets $social_lineL if $social_url exists $social_lineL2
 	}
 
